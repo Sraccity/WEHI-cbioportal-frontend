@@ -1,9 +1,9 @@
 {
-    "name": "cbioportal-frontend",
-    "description": "React Frontend of cBioPortal",
+    "name": "WEHI-demo-frontend",
+    "description": "React Frontend of WEHI demo",
     "repository": "https://github.com/cbioportal/cbioportal-frontend",
-    "logo": "http://www.cbioportal.org/images/cbioportal_logo.png",
-    "keywords": ["react", "redux", "cancer", "genomics"],
+    "logo": "https://www.wehi.edu.au/wp-content/uploads/2023/12/logo@2x-compressed.png",
+    "keywords": ["react", "redux", "cancer", "genomics", "cbioportal"],
     "buildpacks": [
         {
           "url": "https://github.com/heroku/heroku-buildpack-nodejs#v134"

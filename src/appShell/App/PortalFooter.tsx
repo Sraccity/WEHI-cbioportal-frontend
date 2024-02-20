@@ -51,7 +51,7 @@ export default class PortalFooter extends React.Component<
                     <div className="footer-layout">
                         <div className="footer-elem">
                             <img
-                                src={require('../../globalStyles/images/cbioportal_logo.png')}
+                                src={require('../../globalStyles/images/wehi_logo.png')}
                                 style={{
                                     width: 142,
                                     filter: 'grayscale(100%)',

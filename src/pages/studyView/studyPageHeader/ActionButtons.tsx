@@ -120,7 +120,20 @@ export default class ActionButtons extends React.Component<
         }
         return 'Download clinical data for the selected cases';
     }
+    // New click handler function
+    @computed
+    get dataRegistryButtonTooltip() {
+        if (this.showDownloadErrorMessage) {
+            return 'An error occurred while redirecting. Please try again.';
+        }
+        return 'Redirect to Data Registry';
+    }
 
+    @autobind
+    private redirectToAnotherUrl() {
+        // Replace 'https://example.com' with the actual URL you want to redirect to
+        window.location.href = 'http://127.0.0.1:8080/';
+    }
     // @computed
     // get virtualStudy(): JSX.Element | null {
     //     return (
@@ -231,6 +244,20 @@ export default class ActionButtons extends React.Component<
                         </button>
                     </DefaultTooltip>
                 )}
+                <DefaultTooltip
+                    trigger={['hover']}
+                    placement={'top'}
+                    overlay={<span>{this.dataRegistryButtonTooltip}</span>}
+                >
+                    <button
+                        className="btn btn-custom btn-sm"
+                        style={{ backgroundColor: '#3498db', color: '#fff' }}
+                        onClick={this.redirectToAnotherUrl}
+                    >
+                        <i className="fa  fa-external-link"></i>{' '}
+                        {/* Customize the icon */}
+                    </button>
+                </DefaultTooltip>
             </div>
         );
     }
